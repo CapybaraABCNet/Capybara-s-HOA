@@ -1,0 +1,99 @@
+body {
+	background-color: rgb(33, 30, 30);
+	color: white;
+	font-size: 16px;
+	font-family: 'Courier New', Courier, monospace;;
+	padding: 0;
+	margin: 0;
+}
+.game-title {
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: #f5b800;
+    text-shadow: 
+        0 0 5px #ff8c00,
+        0 0 10px #ff8c00,
+        0 0 20px #ff8c00;
+    margin-bottom: 40px;
+       letter-spacing: 2px;
+        animation: flicker 5s infinite;
+}
+.game-title1 {
+            /*font-size: 1vw;
+            font-weight: 700;
+            color: #f5b800;
+            text-shadow: 
+                0 0 5px #ff8c00,
+                0 0 10px #ff8c00,
+                0 0 20px #ff8c00;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            animation: flicker 5s infinite; */
+    color: black;
+    text-align: center;
+    font-size: 1vw;
+}
+.game-title2 {
+            font-size: 1vw;
+            font-weight: 700;
+            color: #f5b800;
+            text-shadow: 
+                0 0 5px #ff8c00,
+                0 0 10px #ff8c00,
+                0 0 20px #ff8c00;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            animation: flicker 5s infinite; */
+    
+}
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+            0 0 5px #ff8c00,
+            0 0 10px #ff8c00,
+            0 0 20px #ff8c00;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+.block {
+	text-align: center;
+	background-color: black;
+	border-radius: 10px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: none;
+    max-height: none;
+    margin: 20px auto;
+} 
+button {
+	background-color: gray;
+	border: none;
+    height: 100px;
+    width:100px;
+}
+.hidden {
+    display: none;
+}
+img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 15px;
+}
+.cl {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.h2 {
+    font-size: 50px;
+    color: red;
+    animation: flicker 1s infinite alternate;
+}
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="styless.css">
+  	<title>Capybara's HOA (ЖКХ капибары)</title>
+  </head>
+  <body>
+    <div class="cl">
+      <p>Ваши достижения:</p>
+      <ul id="dos"></ul>  
+    </div>
+
+  	<div class="block" id="start">
+      <h1 class="game-title2">Вы пришли на работу, вы работаете электриком в строительной компани "Capybara HOA" (Капибара ЖКХ), она строит квартиры и т.д., и вас решили позвать в один из этих жкх чтобы вы починили им свет, вы уже около подьезда</h1>
+      <img src="photo.jpg"><br>
+      <button onclick="Show('2'); dost('Начало игры!')">Войти в подьезд</button><br><br>
+    </div>
+
+    <div class="block hidden" id="2">
+      <h1 class="game-title2">Вы вошли в подвал подьезда, но чтобы войти в специальную комнату есть замок которым можно открыть только паролем, а пароль этот пример: X * 6 + 204 = ?. Тем временем компания дала вам инфу то что X = <em id="e"></em></h1>
+      <p>Введите ответ:</p>
+      <input id="otvet" type="number"><br><br><br><br>
+      <button onclick="ot()">Посмотреть</button><br>
+      <p id="text"></p>
+    </div>
+
+    <div class="block hidden" id="3">
+      <h1 class="game-title2">Вы открыли дверь, но увидили то что на стене нацарапана надпись, как будто кто-то пытался кричать, но беззвучно: "У меня есть голос, но нет рта. Я рассказываю истории, но у меня нет мозга. Я становлюсь громче, когда ты один. Что я?", и решили: "пока не решу эту загадку дальше не пройду"</h1>
+      <p>Введите ответ</p>
+      <input id="input0" type="text"><br><br><br>
+      <button onclick="resh()">Решить</button><br>
+      <p id='text1'></p>
+    </div>
+
+    <div class="block hidden" id="4">
+      <h1 class="game-title2">На рабочем столе вы обнаружили провода у которых разные цвета и у каждого цвета есть свой номер: зелёный - 1, красный - 2, оранжевый - 3, фиолетовый - 4, розовый - 7, фиолетовый - 8, голубой - 10, жёлтый - 15, чёрный - 16, белый - 64. Провода расставлены так: зелёный - 1, красный - 2, синий - 4, фиолетовый - 8, какой провод идёт дальше?</h1>
+      <button onclick="alert('Неправильно!')">Голубой</button><br><br>
+      <button onclick="Show('5'); dost('Правильное решение задачи с проводами')">Чёрный</button><br><br>
+      <button onclick="alert('Неправильно!')">Белый</button><br><br>
+      <button onclick="alert('Неправильно!')">Жёлтый</button>
+    </div>
+
+    <div class="block hidden" id="5">
+      <h1 class="game-title2">Вы стоите перед панелью управления. На ней три кнопки: красная, синяя и зеленая. На стене над панелью висит старая выцветшая инструкция: "Чтобы пройти, нажми кнопку цвета тишИны. Цвет спокойствия - это ложь". В комнате горит только тусклая красная аварийная лампа.</h1>
+      <button onclick="Show('6'); dost('Правильное решение задачи с кнопками')">Красная</button><br><br>
+      <button onclick="alert('Неправильно!')">Синяя</button><br><br>
+      <button onclick="alert('Неправильно!')">Зелёная</button><br><br>
+    </div>
+
+    <div class="block hidden" id="6">
+      <h1 class="game-title2">Вы решили правильно, журнал электрика, найденный на полу, исписан одной и той же фразой на разных страницах: "Чем больше меня забирают, тем больше я становлюсь. Я могу быть твоим концом в этом подвале. Что я?"</h1>
+      <input id="otvet1" type="text"><br><br>
+      <button onclick="vop()">Отправить ответ</button><br><br>
+      <p id="text2"></p>
+    </div>
+
+    <div class="block hidden" id="7">
+      <h1 class="game-title2">Вы попали в самый нижний подвал ЖКХ, и тут прям как лабиринт, что выберите:</h1>
+      <button onclick="Show('8')">Правый угол</button><br><br>
+      <button onclick="document.getElementById('text3').innerHTML = 'Там оказался тупик'">Левый угол</button><br><br>
+      <p id="text3"></p>
+    </div>
+
+    <div class="block hidden" id="8">
+      <h1 class="game-title2">Выберите:</h1>
+      <button onclick="Show('9')">Правый угол</button><br><br>
+      <button onclick="alert('Там был тупик')">Левый угол</button><br>
+    </div>
+
+    <div class="block hidden" id="9">
+      <h1 class="game-title2">Выберите:</h1>
+      <button onclick="alert('Там был тупик');">Правый угол</button><br><br>
+      <button onclick="Show('10')">Левый угол</button>
+    </div>
+
+    <div class="block hidden" id="10">
+      <h1 class="game-title2">Выберите:</h1>
+      <button onclick="Show('11')">Правый угол</button><br><br>
+      <button onclick="alert('Там был тупик')">Левый угол</button><br><br>
+    </div>
+
+    <div class="block hidden" id="11">
+      <h1 class="game-title2">Нажмите на кнопку, у вас есть:</h1>
+      <p id="time"></p>
+      <p id="text4"></p>
+      <button onclick="but()">Нажмите на кнопку</button>
+    </div>
+
+    <div class="block hidden" id="12">
+      <h1 class="game-title2">Дверь открывается, но вдруг вы слышите странные звуки шагов, из темноты выходит... СТРАШНАЯ КАПИБАРА!</h1>
+      <h2 class="h2">Бегите!</h2>
+      <img src="photo1.jpg"><br>
+      <button onclick="Show('13'); dost('Вы встретили страшную Капибару!')">Бежать!</button>
+    </div>
+
+    <div class='block hidden' id='13'>
+      <h2 class="h2">Бегите!</h2>
+      <p id="time1"></p>
+      <p id="text5"></p>
+      <button onclick="but1(false,'text5')">Правая дверь</button><br><br>
+      <button onclick="but1(false,'text5')">Середина</button><br><br>
+      <button onclick="but1(true,'text5')">Левая дверь</button><br><br>
+    </div>
+    
+    <div class='block hidden' id='14'>
+      <h2 class="h2">Бегите!</h2>
+      <p id="time1"></p>
+      <p id="text6"></p>
+      <button onclick="but1(true,'text6')">Правая дверь</button><br><br>
+      <button onclick="but1(false,'text6')">Середина</button><br><br>
+      <button onclick="but1(false,'text6')">Левая дверь</button><br><br>
+    </div>
+
+    <div class='block hidden' id='15'>
+      <h2 class="h2">Бегите!</h2>
+      <p id="time1"></p>
+      <p id="text7"></p>
+      <button onclick="but1(false,'text7')">Правая дверь</button><br><br>
+      <button onclick="but1(false,'text7')">Середина</button><br><br>
+      <button onclick="but1(true,'text7')">Левая дверь</button><br><br>
+    </div>
+
+    <div class='block hidden' id='16'>
+      <h2 class="h2">Бегите!</h2>
+      <p id="time1"></p>
+      <p id="text8"></p>
+      <button onclick="but1(false,'text8')">Правая дверь</button><br><br>
+      <button onclick="but1(false,'text8')">Середина</button><br><br>
+      <button onclick="but1(true,'text8')">Левая дверь</button><br><br>
+    </div>
+
+    <div class='block hidden' id='17'>
+      <h2 class="h2">Бегите!</h2>
+      <p id="time1"></p>
+      <p id="text9"></p>
+      <button onclick="but1(false,'text9')">Правая дверь</button><br><br>
+      <button onclick="but1(true,'text9')">Середина</button><br><br>
+      <button onclick="but1(false,'text9')">Левая дверь</button><br><br>
+    </div>
+
+    <div class='block hidden' id='18'>
+      <h2 class="h2">Бегите!</h2>
+      <p id="time1"></p>
+      <p id="text10"></p>
+      <button onclick="but1(true,'text10')">Правая дверь</button><br><br>
+      <button onclick="but1(false,'text10')">Середина</button><br><br>
+      <button onclick="but1(false,'text10')">Левая дверь</button><br><br>
+    </div>
+
+    <div class='block hidden' id='19'>
+      <h2 class="h2">Бегите!</h2>
+      <p id="time1"></p>
+      <p id="text11"></p>
+      <button onclick="but1(false,'text11')">Правая дверь</button><br><br>
+      <button onclick="but1(true,'text11')">Середина</button><br><br>
+      <button onclick="but1(false,'text11')">Левая дверь</button><br><br>
+    </div>
+
+    <div class='block hidden' id="20">
+      <h2 class="h2">Бегите!</h2>
+      <p id="time1"></p>
+      <p id="text12"></p>
+      <button onclick="but1(false,'text11')">Правая дверь</button><br><br>
+      <button onclick="but1(false,'text11')">Середина</button><br><br>
+      <button onclick="but1(true,'text11')">Левая дверь</button><br><br>
+    </div>
+
+    <div class="block hidden" id="21">
+      <h1 class="game-title2">Нажмите на кнопку чтобы закрыть дверь за 5 сек.</h1>
+      <p id="text13"></p>
+      <button onclick="but2()">Закрыть!</button><br>
+    </div>
+
+    <div class="block hidden" id="22">
+      <h1 class="game-title2">Вы успели спасти себя! Теперь вы можете идти дальше, но у двери опять пароль, опять уравнение, X * 22 - 99 = 11, X = ?</h1>
+      <input type="number" placeholder="Введите X" id="x"><br>
+      <button onclick="reshh()">Решить</button><br>
+      <p id="otvett"></p>
+    </div>
+
+    <div class="block hidden" id="23">
+      <h1 class="game-title2">Вы увидели то что на столе лежит папка, а в той папке документы о той капибаре, оказалось то что её зовут "Железная капибара", задумывалась как фигура капибары, которая должна была стоять рядом новой жкх, но один инженер из компании, решил добавить к ниму разные штуки, и решили сделать её полноценным роботом, но всё пошло не по плану, и из-за этого он начал агрессировать и даже придавил 2 рабочих, по этому его закрыли в подвале. Вы не захотели увольнятся, захотели изучить это, по этому вы спокойно вышли на улицу и решили то что просто это так не останется. Good End!</h1>
+      <button onclick="dost('Конец Игры!')">Конец</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
